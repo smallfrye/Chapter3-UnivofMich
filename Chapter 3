@@ -1,0 +1,73 @@
+name = raw_input("Enter your name")
+print "Howdy", name
+
+
+# This first line is provided for you
+
+hrs = raw_input("Enter Hours:")
+rate = raw_input("Enter Rate:")
+
+gross_pay = int(hrs) * float(rate)
+print gross_pay
+
+# This first line is provided for you
+
+hrs = raw_input("Enter Hours:")
+rate = raw_input("Enter Rate:")
+regular = int(40)
+
+# calculate overtime hours (Exercise 3.1)
+
+if int(hrs) > 40:
+    overtime_hours = int(hrs) - 40
+    overtime_rate = 1.5 * float(rate)
+    overtime = overtime_hours * overtime_rate
+    regular_pay = regular * float(rate)
+    gross_pay = overtime + regular_pay
+    print gross_pay
+else:
+    print regular_pay
+    
+hrs = raw_input("Enter Hours:")
+h = float(hrs)
+rate = raw_input("Enter Rate:")
+r = float(rate)
+regular = int(40)
+
+# calculate overtime hours (Exercise 3.2)
+# using try and except
+
+try:
+    if h > 40:
+        overtime_hours = h - 40
+        overtime_rate = 1.5 * r
+        overtime = overtime_hours * overtime_rate
+        regular_pay = regular * float(rate)
+        gross_pay = overtime + regular_pay
+        print gross_pay
+    else:
+        print regular_pay
+
+except:
+    print "Please enter numeric input"
+
+
+# exercise 3.3
+
+score = raw_input('Enter score: ')
+
+A = 0.9
+B = 0.8
+C = 0.7
+D = 0.6
+
+if float(score) < D:
+    print 'F'
+elif float(score) >= D and float(score) < C:
+    print 'D'
+elif float(score) >= C and float(score) < B:
+    print 'C'
+elif float(score) >= B and float(score) < A:
+    print 'B'
+else:
+    print 'A'
